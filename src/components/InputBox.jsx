@@ -1,17 +1,18 @@
 import { useRef, useState } from "react";
 
 export const InputBox = () => {
-  const inputref = useRef(null);
+  const inputref = useRef();
   const handleClick = () => {
-    console.log(inputref.current.value);
+    const task = inputref.current.value;
+    console.log(task);
   };
 
   return (
     <div>
-      <div className="h-screen flex items-center justify-center">
+      <div className=" h-40 flex items-center justify-center">
         <input
           type="text"
-          className="border border-black rounded-md w-3/6 h-16 text-2xl"
+          className="border bg-white border-black rounded-md w-3/6 h-16 text-2xl"
           ref={inputref}
         ></input>
         <button
